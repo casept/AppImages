@@ -1,4 +1,4 @@
-app: Handbrake 
+app: Handbrake
 
 ingredients:
   packages:
@@ -8,4 +8,4 @@ ingredients:
   sources:
     - deb http://archive.ubuntu.com/ubuntu/ trusty main universe multiverse
   ppas:
-    - stebbins/handbrake-releases 
+    - stebbins/handbrake-releases
