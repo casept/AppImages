@@ -4,12 +4,14 @@ ingredients:
   script:
     # The official site has a crappy redirect instead of the actual file, use a mirror
     # FIXME: Version is currently hardcoded
-    - wget -c "http://ftp.halifax.rwth-aachen.de/blender/release/Blender2.78/blender-2.78c-linux-glibc219-x86_64.tar.bz2"
+    - URL="http://ftp.halifax.rwth-aachen.de/blender/release/Blender2.78/blender-2.78c-linux-glibc219-x86_64.tar.bz2"
+    - wget -c $URL
     - ls blender-*.bz2 | cut -d "-" -f 2 > VERSION
 
 script:
   - tar xf ../*.tar.bz2
   - mv blender-*/* ./usr/bin/
+  - rm -r blender*
   - cp ./usr/bin/icons/scalable/apps/blender.svg .
   # Create .desktop file
   - cat > blender.desktop <<\EOF
