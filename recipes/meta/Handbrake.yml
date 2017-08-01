@@ -1,0 +1,11 @@
+app: Handbrake 
+
+ingredients:
+  packages:
+    - handbrake-cli
+    - handbrake-gtk
+  dist: trusty
+  sources:
+    - deb http://archive.ubuntu.com/ubuntu/ trusty main universe multiverse
+  ppas:
+    - stebbins/handbrake-releases 
